@@ -1,0 +1,17 @@
+body {
+    background-image: url(https://source.unsplash.com/xkEtD4Stn0I);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+.container {
+    padding: 20px;
+    z-index: 2;
+    position: relative;
+    text-align: center;
+}
+
+.ui.inverted.yellow.button {
+    margin-top: 3%;
+}

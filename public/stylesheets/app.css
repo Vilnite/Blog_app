@@ -1,0 +1,25 @@
+i.icon {
+    font-size: 2em;
+}
+
+i.right {
+    font-size: 10px;
+}
+
+.ui.main {
+    margin-top: 7.0em; 
+}
+
+#delete {
+    display: inline;
+}
+
+.description {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+
+#back {
+    text-align: left;
+}

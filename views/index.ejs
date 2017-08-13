@@ -1,0 +1,34 @@
+<% include partials/header %>
+
+<div class="ui main text container">
+    <div class="ui huge header">HERE'S WHAT I THINK:</div>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <% blogs.forEach(function(blog){ %>
+                <div class="item">
+                    <div class="image">
+                        <img src="<%= blog.image %>">
+                    </div>
+                    <div class="content">
+                        <a class="header" href="/blogs/<%= blog._id %>"><%= blog.title %></a>
+                        <div class="meta">
+                            <span id="date"><%= blog.created.toDateString() %></span>
+                            <!--toDateString() method will convert date in nice format, there's Moment JS library to manage dates-->
+                        </div>
+                        <div class="description">
+                            <p><%- blog.body.substring(0, 150) %>...</p>
+                            <!--substring() method will hide the text leaving only first 100 characters (from 0, to 200)-->
+                            <!--<%- %> dash sign returns actual html content that has been send (instead of string)    -->
+                        </div>
+                        <div class="extra">
+                            <a href="/blogs/<%= blog._id %>">Read More<i class="right chevron icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+
+</div>
+
+<% include partials/footer %>
